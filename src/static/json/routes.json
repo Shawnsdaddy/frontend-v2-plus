@@ -45,6 +45,11 @@
         "path": "/tools/maaV2",
         "text": "排班表生成器V2-α",
         "isChild": false
+      },
+      {
+        "path": "/tools/mower",
+        "text": "Mower排班表生成器",
+        "isChild": false
       }
     ]
   },
