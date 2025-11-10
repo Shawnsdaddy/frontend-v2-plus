@@ -604,72 +604,11 @@ function set_facility(e) {
             </div>
           </n-button>
         </div>
-      </div>
-      <!-- <div class="extra_box">
-        <div class="right_extra_contain">
-          <n-button
-            :secondary="facility != 'gaming_1'"
-            class="facility-1"
-            @click="set_facility('gaming_1')"
-          >
-            <div>
-              <div class="facility-name">活动室1</div>
-              <div class="avatars">
-                <img
-                  v-for="i in current_plan.gaming_1.plans"
-                  :src="`avatar/${i.agent}.webp`"
-                  width="45"
-                  height="45"
-                  :style="{ 'border-bottom': color_map[i.group] }"
-                />
-              </div>
-            </div>
-          </n-button>
-        </div>
-        <div>
-          <n-button
-            :secondary="facility != 'gaming_2'"
-            class="facility-1"
-            @click="set_facility('gaming_2')"
-          >
-            <div>
-              <div class="facility-name">活动室2</div>
-              <div class="avatars">
-                <img
-                  v-for="i in current_plan.gaming_2.plans"
-                  :src="`avatar/${i.agent}.webp`"
-                  width="45"
-                  height="45"
-                  :style="{ 'border-bottom': color_map[i.group] }"
-                />
-              </div>
-            </div>
-          </n-button>
-        </div>
-        <div>
-          <n-button
-            :secondary="facility != 'gaming_3'"
-            class="facility-1"
-            @click="set_facility('gaming_3')"
-          >
-            <div>
-              <div class="facility-name">活动室3</div>
-              <div class="avatars">
-                <img
-                  v-for="i in current_plan.gaming_3.plans"
-                  :src="`avatar/${i.agent}.webp`"
-                  width="45"
-                  height="45"
-                  :style="{ 'border-bottom': color_map[i.group] }"
-                />
-              </div>
-            </div>
-          </n-button>
-        </div>
-      </div> -->
+      </div>  
     </div>
     <n-space justify="center" v-if="facility">
       <table>
+        <tbody>
         <tr>
           <td>设施类别：</td>
           <td>
@@ -710,10 +649,12 @@ function set_facility(e) {
             </n-button>
           </td>
         </tr>
+        </tbody>
       </table>
     </n-space>
     <n-space justify="center">
       <table>
+        <tbody>
         <tr v-for="i in operator_limit" :key="i">
           <td class="select-label">
             <template v-if="facility == 'train' && i == 1">协助位</template>
@@ -751,6 +692,7 @@ function set_facility(e) {
             </n-form-item>
           </td>
         </tr>
+        </tbody>
       </table>
     </n-space>
   </div>

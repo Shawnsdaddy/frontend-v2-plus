@@ -38,8 +38,8 @@ const renderAvatar = (option, size = 40) => {
   if (charId && charIdToName[charId]) {
     return h(OperatorAvatar, {
       charId,
-      size,
-      border: true
+      size,      
+      border: false
     })
   }
   const label = getDisplayName(option)
